@@ -26,7 +26,7 @@ watch(status, () => {
       <div class="header_right">
         <div>
           <input v-model="searchTerm" class="header_input" type="text" />
-          <button class="header_button" @click="applySearch">Применить(поиск)</button>
+          <button class="header_button" @click="applySearch">Apply(Search)</button>
         </div>
 
         <div class="header_category">

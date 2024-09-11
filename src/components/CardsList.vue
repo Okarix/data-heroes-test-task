@@ -84,17 +84,36 @@ const prevPage = async () => {
 .pagination {
   display: flex;
   gap: 20px;
+  margin-top: 30px;
 }
 
 .pagination button {
-  width: 100px;
+  width: 120px;
   height: 50px;
   cursor: pointer;
   border-radius: 8px;
   border: none;
+  background-color: rgb(60, 62, 68);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
 }
 
-.pagination button:hover {
-  color: gray;
+.pagination button:hover:not(:disabled) {
+  background-color: rgb(75, 77, 83);
+  transform: scale(1.05);
+}
+
+.pagination button:active:not(:disabled) {
+  transform: scale(1);
+  background-color: rgb(50, 52, 58);
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 </style>
